@@ -1,0 +1,14 @@
+.abc {
+  width: 100px;
+  height: 100px;
+}
+html[data-theme=light] .abc {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+html[data-theme=dark] .abc {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}

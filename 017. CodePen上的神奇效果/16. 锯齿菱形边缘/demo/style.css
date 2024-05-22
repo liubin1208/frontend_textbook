@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 100px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  background: url('./avatar.jpeg') 0 0/100%;
+  --n: 11;
+  --s: calc(100% / var(--n));
+  /* background: repeating-conic-gradient(#f40 0 25%, #0000 25% 50%) 0 0 /
+    calc(var(--s) * 2) calc(var(--s) * 2); */
+  --g: #0000 calc(25% + var(--s) / 4), #000 0 calc(75% - var(--s) / 4), #0000 0;
+  -webkit-mask: repeating-conic-gradient(#f40 0 25%, #0000 25% 50%) 0 0 /
+      calc(var(--s) * 2) calc(var(--s) * 2),
+    linear-gradient(-45deg, var(--g)), linear-gradient(45deg, var(--g));
+
+  -webkit-mask-composite: source-over, source-in;
+  clip-path: polygon(
+    50% calc(-0.5 * var(--s)),
+    calc(100% + 0.5 * var(--s)) 50%,
+    50% calc(100% + 0.5 * var(--s)),
+    calc(-0.5 * var(--s)) 50%
+  );
+  outline: 1px solid #f40;
+}

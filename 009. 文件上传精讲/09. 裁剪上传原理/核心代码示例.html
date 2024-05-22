@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      button {
+        display: block;
+        margin: 1em 0;
+      }
+      .preview {
+        max-width: 300px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" />
+    <img class="preview" />
+    <button>生成裁剪后的File对象</button>
+
+    <script>
+      const inpFile = document.querySelector('input[type="file"]');
+      const img = document.querySelector('.preview');
+      const btn = document.querySelector('button');
+
+      inpFile.onchange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          img.src = e.target.result;
+          // 实现裁剪
+        };
+        reader.readAsDataURL(file);
+      };
+
+      btn.onclick = () => {
+        // 拿到裁剪后的file对象
+        const cutInfo = {
+          x: 500,
+          y: 500,
+          cutWidth: 300,
+          cutHeight: 300,
+          width: 100,
+          height: 100,
+        };
+        const canvas = document.createElement('canvas');
+        canvas.width = cutInfo.width;
+        canvas.height = cutInfo.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(
+          img,
+          cutInfo.x,
+          cutInfo.y,
+          cutInfo.cutWidth,
+          cutInfo.cutHeight,
+          0,
+          0,
+          cutInfo.width,
+          cutInfo.height
+        );
+        canvas.toBlob((blob) => {
+          const file = new File([blob], 'avatar.jpg', {
+            type: 'image/jpeg',
+          });
+          console.log(file);
+          // ajax ---file---> 服务器
+        }, 'image/jpeg');
+      };
+    </script>
+  </body>
+</html>

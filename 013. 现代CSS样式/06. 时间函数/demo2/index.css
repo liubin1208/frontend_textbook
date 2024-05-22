@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8e5d0;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-top: 50px;
+  font-size: 3em;
+  color: #e69138;
+  font-family: '翩翩体-简';
+}
+
+h1 {
+  transition: 0.5s linear;
+}
+h1:hover {
+  transform: scale(1.3);
+}

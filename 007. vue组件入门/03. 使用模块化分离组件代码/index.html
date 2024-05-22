@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/c/font_3555577_mmbyfinkri.css"
+    />
+    <style>
+      .star-rate {
+        display: flex;
+      }
+      .star-rate .i-star-empty {
+        color: #c6d1de;
+        cursor: pointer;
+        animation: scale 0.3s;
+      }
+      .star-rate .i-star {
+        color: #f7ba2a;
+        transform: scale(0.85);
+        animation: scale 0.3s reverse;
+      }
+      @keyframes scale {
+        from {
+          transform: scale(0.85);
+        }
+        90% {
+          transform: scale(1.05);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>

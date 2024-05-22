@@ -1,0 +1,52 @@
+<mxfile host="65bd71144e">
+    <diagram id="kiOwKXXaKMihy3Zn57Q6" name="第 1 页">
+        <mxGraphModel dx="677" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="父组件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="80" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="子组件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="330" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;fontColor=#000000;startArrow=none;startFill=0;endArrow=none;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="7" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="事件处理函数" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="150" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="1. 事件注册" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="40" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;fontSize=16;fontColor=#E86352;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#666666;" edge="1" parent="1" source="13" target="26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="子组件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="330" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="2. 事件触发" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="40" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="对应事件&lt;font color=&quot;#000000&quot;&gt;发生&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontColor=#E86352;" vertex="1" parent="1">
+                    <mxGeometry x="775" y="210" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="745" y="220" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="父组件将&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;font color=&quot;#e86352&quot;&gt;一个函数&lt;/font&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;和&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;font color=&quot;#e86352&quot;&gt;子组件的某件事&lt;/font&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;关联" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="200" width="130" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="父组件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="80" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="事件处理函数" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="150" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;font color=&quot;#000000&quot;&gt;触发关联函数的运行&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontColor=#E86352;" vertex="1" parent="1">
+                    <mxGeometry x="775" y="240" width="140" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

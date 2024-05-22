@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: 'Roboto Mono';
+      }
+      .btn {
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <label>价格：2999.00</label>
+    <button class="btn">打折</button>
+    <script src="./animation.js"></script>
+    <script>
+      const label = document.querySelector('label');
+      const btn = document.querySelector('.btn');
+
+      btn.onclick = function () {
+        // 开始动画
+        animation(1000, 2999, 299, (val) => {
+          label.textContent = `价格：${val.toFixed(2)}`;
+          // label.style.left = val+'px'
+        });
+      };
+    </script>
+  </body>
+</html>

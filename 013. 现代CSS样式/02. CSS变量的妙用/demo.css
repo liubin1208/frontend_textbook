@@ -1,0 +1,19 @@
+:root {
+  --size: 300px;
+}
+
+.container {
+  --size: 250px;
+  --gap: calc(var(--size) * 0.1);
+  width: var(--size);
+  height: var(--size);
+  background: #061626;
+  padding: var(--gap);
+  margin: var(--gap);
+}
+
+.container .item {
+  width: calc(var(--size) / 2);
+  height: calc(var(--size) / 2);
+  background: #61c454;
+}

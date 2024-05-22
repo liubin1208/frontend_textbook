@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      button {
+        display: block;
+        margin: 1em 0;
+      }
+      .preview {
+        max-width: 300px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" />
+    <img class="preview" />
+    <button>生成截图后的File对象</button>
+
+    <script>
+      const inpFile = document.querySelector('input[type="file"]');
+      const img = document.querySelector('.preview');
+      const btn = document.querySelector('button');
+
+      inpFile.onchange = (e) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          img.src = e.target.result;
+          // 截图功能
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      };
+
+      btn.onclick = () => {
+        const cutInfo = {
+          x: 300,
+          y: 300,
+          cutWidth: 500,
+          cutHeight: 500,
+          scaleWidth: 180,
+          scaleHeight: 180,
+        };
+        const canvas = document.createElement('canvas');
+        canvas.width = cutInfo.scaleWidth;
+        canvas.height = cutInfo.scaleHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(
+          img,
+          cutInfo.x,
+          cutInfo.y,
+          cutInfo.cutWidth,
+          cutInfo.cutHeight,
+          0,
+          0,
+          cutInfo.scaleWidth,
+          cutInfo.scaleHeight
+        );
+        canvas.toBlob((blob) => {
+          console.log(
+            new File([blob], 'avatar.jpg', {
+              type: 'image/jpeg',
+            })
+          );
+        }, 'image/jpeg');
+
+        // document.body.appendChild(canvas);
+      };
+    </script>
+  </body>
+</html>
